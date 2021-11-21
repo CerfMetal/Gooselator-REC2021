@@ -1,0 +1,576 @@
+<!DOCTYPE html>  
+<html> 
+<head id="main"> 
+<meta charset="UTF-8"> 
+<meta name="description" content="Translate Indegenious Languages to English and Vice Versa"> 
+<title>Goose Translator</title>
+</head>
+<body>
+
+    <header id="nav-bar">
+        <div class="container"> 
+            <a href='home.html'><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Medicine_Wheel.png" alt="logo" class="logo"></a>
+            <nav>
+                <ul> 
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="translate.html">Translator</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header> 
+    </br> 
+    <div class='container_trans'>
+            <p id='cont'>Step 1: Choose what language you want to translate to</p>
+            <p id='cont'>Step 2: Enter the phrase to be translated</p>
+            <p id='cont'>Step 3: Click the Translate button</p>
+        </br> 
+        <div id='trans-con'></div>
+            <label for="language-options">Language</label>
+            <select id="language" name="language">
+                <option value="Cree English">Cree to English</option>
+                <option value="Ojibway English">Ojibway to English</option>
+                <option value="Mohawk English">Mohawk to English</option>
+                <option value="English Cree">English to Cree</option>
+                <option value="English Ojibway">English to Ojibway</option>
+                <option value="English Mohawk">English to Mohawk</option>
+            </select>
+            <p id='instrc'>[If the word has a space in it, replace it with an underscore]</p>
+        </br>  
+        </br>
+            <label for="subject"></label>
+            <textarea name="subject" style="resize:none" placeholder="Original Word.." id="toTranslate"></textarea>
+            <label for="subject">Blank</label>
+            <textarea name="subject" style="resize:none" placeholder="Translated Word.."  id="Translated"></textarea> 
+        </br>
+        </br>
+        </br>
+            <input type="submit" value="Translate" id='btn' onclick="translatesubmit()">
+        </div>   
+    </div>
+
+
+    <!--This section is for users to add thier own words-->
+    </br>
+    </br>
+    </br> 
+            <p id='cont'>Step 1: Choose the Language of the Translated word</p>
+            <p id='cont'>Step 2: Enter both the phrase and the translated phrase</p>
+            <p id='cont'>Step 3: Click the Add button</p>
+    <div class='trans-add'>
+        <div id='trans-con'></div>
+        <label for="">Language</label>
+        <select id="languageadd" name="languageadd">
+            <option value="Cree">Cree</option>
+            <option value="Ojibway">Ojibway</option>
+            <option value="Mohawk">Mohawk</option>
+        </select>
+    </br>
+    <div id='center'>
+        <p align='center'><input type="text" id="lword" name="lword" placeholder="Enter Word In Indeginous Language"></p>
+        <br> 
+        <p align='center'><input type="text" id="tword" name="tword" placeholder="Enter Word In English Language"></p>
+    </div>
+    </br>
+    </br>  
+        <div id='center'>
+            <p align='center'><input type="submit" value="Add" id='btn' onclick="addword()"></p>
+        </div>    
+        
+        </div>   
+    </div> 
+
+</br>
+</br>  
+</br>
+</br> 
+</br>
+</br> 
+</br>
+</br> 
+</br>
+</br> 
+</br>
+</br> 
+
+<!--The repeated code below is from https://jquerypluginsfree.com/10-simple-keyboard-using-css-only/ made by Nour Saud-->
+<div class="keyboard-base">
+        <div class="key" onclick="keyboard('a')">a</div>
+        <div class="key" onclick="keyboard('aa')">aa</div>
+        <div class="key" onclick="keyboard('g')">g</div>
+        <div class="key" onclick="keyboard('i')">i</div>
+        <div class="key" onclick="keyboard('ii')">ii</div>
+        <div class="key" onclick="keyboard('j')">j</div>
+        <div class="key" onclick="keyboard('k')">k</div>
+        <div class="key" onclick="keyboard('l')">l</div>
+        <div class="key" onclick="keyboard('l_')">l_</div>
+        <div class="key" onclick="keyboard('ly')">ly</div>
+        <div class="key" onclick="keyboard('m')">m</div>
+        <div class="key" onclick="keyboard('n_')">n_</div>
+        <div class="key" onclick="keyboard('n')">n</div>
+        <div class="key" onclick="keyboard('nj')">nj</div>
+        <div class="key" onclick="keyboard('ny')">ny</div>
+        <div class="key" onclick="keyboard('r_')">r_</div>
+        <div class="key" onclick="keyboard('r')">r</div>
+        <div class="key" onclick="keyboard('p')">p</div>
+        <div class="key" onclick="keyboard('t')">t</div>
+        <div class="key" onclick="keyboard('t_')">t_</div>
+        <div class="key" onclick="keyboard('tj')">tj</div>
+        <div class="key" onclick="keyboard('u')">u</div>
+        <div class="key" onclick="keyboard('uu')">uu</div>
+        <div class="key" onclick="keyboard('y')">y</div>
+        <div class="key" onclick="keyboard('w')">w</div>
+        <div class="key" onclick="keyboard('é')">é</div>
+        <div class="key" onclick="keyboard('î')">î</div>
+        <div class="key" onclick="keyboard('í')">í</div>
+        <div class="key" onclick="keyboard('â')">â</div>
+        <div class="key" onclick="keyboard('ô')">ô</div>
+        <div class="key" onclick="keyboard('á')">á</div>
+        <div class="key" onclick="keyboard('ê')">ê</div>
+        <div class="key" onclick="keyboard('-')">-</div>
+        <div class="key" onclick="keyboard('_')">_</div>
+        <div class="key" onclick="keyboard(':')">:</div>
+        <div class="key" onclick="keyboard('’')">’</div>
+        <div class="key" onclick="keyboard('\'')">'</div>
+
+        <div class="key space" onclick="keyboard(' ')">Space</div>
+<!--The repeated code above is from https://jquerypluginsfree.com/10-simple-keyboard-using-css-only/ made by Nour Saud-->
+
+</body>
+
+
+<!--This section is for the script-->
+<script language="javascript" type="text/javascript">
+
+        const English = ['hello','water','morning','afternoon','evening','child','money','spirit','thanks','story','supper','farmer','hunter','program','history','mother','father','school','lunch','dinner'];
+
+        const Cree = ['tânisi','nîpîy','wapan','pôn-âpihtâ-kîsikâw','miyotakosin','nihtâwikihâkan','soniyaw','ahcâhk','ay','âcimowin','otâkwanimitisowin','okistikêw','omâcîw','kîkwayisihecikewin','ayamihcikêwikamik','okâwîmâw','ohtâwîmâw','âwatawâsiswâkan','nemâwin','âpihtâkîsikan'];
+
+        const Ojibway = ["gwekwe'",'waaboo','waaban','gii-ishkwaa-naawakweg','gabe-onaagosh','abinoojiinh','zhooniyaa','aadisookaan','miigwechiwitaagozi','babaamaajimowin','onaagoshi-wiisiniwin','gitige-inini','gaayosed','igewin','mewizhaizhi-bimaadiziwin','oga','weyoosimind','gikinaamaadinaan','miijiwin','wiisini'];
+
+        const Mohawk = ['sekoh','ohné:ka','ohron’kéhstsi’','iotohétstonnénkie','o’karasnéhanonkwá:ti','eksá:’a','ohwíhsta','atóhnhets','niawenhkó:wa','oká:ra','okara’snéhai','raién:thos','rató:rats','tyataterakwén:nis','raonawirà:ke','iakoiá:ner','rake’níha','tsiionterihwaienhstáhkwa','énkie','teyontska’hónhkwa'];
+
+
+    function translatesubmit(){
+        var original = document.getElementById("toTranslate").value.split(" ");
+        var language = document.getElementById("language").value.split(" ");
+
+        var langOriginal = languageOriginal(language[0]);
+        var langTrans = languageTranslated(language[1]);
+
+        var translation = "";
+
+        for (let i = 0; i < original.length; i++) {
+            console.log(langOriginal.includes(original[i]));
+            console.log(original[i]);
+            if (langOriginal.includes(original[i])) {
+
+                translation += langTrans[langOriginal.indexOf(original[i])] + " ";
+            };
+        };
+        document.getElementById("Translated").value = translation;
+    }
+
+    function addword(){
+        var IndeginousW = document.getElementById("lword").value;
+        var EnglishW = document.getElementById("tword").value.replace(" ", "_");
+        console.log(EnglishW + IndeginousW);
+
+        var language = document.getElementById("languageadd").value;
+
+        English.push(EnglishW);
+
+        switch(language) {
+            case "Cree" :
+                Cree.push(IndeginousW);
+                Ojibway.push('');
+                Mohawk.push('');
+                console.log("Cree");
+                break;
+
+            case "Ojibway" :
+                Cree.push('');
+                Ojibway.push(IndeginousW);
+                Mohawk.push('');
+                console.log("Ojibway");
+                break;
+
+            case "Mohawk" :
+                Cree.push('');
+                Ojibway.push('');
+                Mohawk.push(IndeginousW);
+                console.log("Mohawk");
+                break;
+        }
+    }
+
+    function languageOriginal (lang){
+        switch(lang) {
+            case "English" :
+                return English;
+                break;
+
+            case "Cree" :
+                return Cree;
+                break;
+
+            case "Ojibway" :
+                return Ojibway;
+                break;
+
+            case "Mohawk" :
+                return Mohawk;
+                break;
+        }
+    }
+
+    function languageTranslated (lang){
+        switch(lang) {
+            case "English" :
+                return English;
+                break;
+
+            case "Cree" :
+                return Cree;
+                break;
+
+            case "Ojibway" :
+                return Ojibway;
+                break;
+
+            case "Mohawk" :
+                return Mohawk;
+                break;
+        }
+    }
+
+    function keyboard(letter){
+        console.log(letter);
+        document.getElementById("toTranslate").value = document.getElementById("toTranslate").value + letter;
+    }
+
+
+
+</script>
+
+<style>
+
+/*The repeated code below is from https://jquerypluginsfree.com/10-simple-keyboard-using-css-only/ made by Nour Saud-->*/
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.keyboard-base {
+    max-width: 1085px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(30, 30px);
+    grid-template-rows: repeat(5, 60px);
+    grid-gap: 5px;
+}
+
+
+.key {
+    background-color: #393E46;
+    grid-column: span 2;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+}
+
+.key:hover {
+  border: 1px solid #eeeeee;
+  
+}
+
+.delete {
+    grid-column: span 4;
+}
+
+.tab {
+    grid-column: span 3;
+}
+
+.backslash {
+    grid-column: span 3;
+}
+
+.capslock {
+    grid-column: span 4;
+}
+
+.return {
+    grid-column: span 4;
+}
+
+.leftshift {
+    grid-column: span 5;
+}
+
+.rightshift {
+    grid-column: span 5;
+}
+
+.leftctrl {
+    grid-column: span 3;
+}
+
+.command {
+    grid-column: span 3;
+    font-size: 14px;
+}
+
+.space {
+    grid-column: span 13;
+}
+
+/*The repeated code above is from https://jquerypluginsfree.com/10-simple-keyboard-using-css-only/ made by Nour Saud-->*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap'); 
+html{
+    background:#000000;    
+}
+#main{ 
+    color: #FD7014; 
+    font-family: "Poppins", sans-serrif; 
+    text-align: center; 
+}
+h1{
+    text-decoration: none;
+    font-family: "Trebucet", sans-serif; 
+    color: #FD7014;      
+    display: block; 
+    text-align: center;  
+} 
+#head2{
+    text-decoration: none;
+    font-family: "Trebucet", sans-serif; 
+    color: #FD7014;  
+    display: block; 
+    text-align: center;    
+}
+.container{
+  width: 80%; 
+  margin: 0 auto; 
+     
+}
+.logo{  
+    display: block;  
+    float: left; 
+    width: 60px; 
+    margin: auto; 
+    position: center; 
+
+}
+nav{ 
+    float: right; 
+
+}
+header{
+    background-color: #393E46;  
+}
+header::after {
+    content: ''; 
+    display: table; 
+    clear: both; 
+
+}
+nav ul {
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+}
+nav li{
+    display: inline-block;
+    margin-left: 10px; 
+    padding: 20px;       
+}
+nav a{
+    color: #EEEEEE;
+    text-decoration: none;
+    text-transform: uppercase; 
+    font-family: "Trebucet", sans-serif;
+    font-size: 14px; 
+    font-weight: 400;
+    padding: 20px;   
+}
+nav a:hover{
+    background-color: #000000; 
+    color: #FD7014; 
+}
+#form1{
+    float:left; 
+    padding-left: 250px;
+    padding-right: 250px; 
+    padding-top: 100px; 
+    padding-bottom: 100px;  
+    display: flex; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+    
+}
+#ul1{
+    list-style: none; 
+}
+input {
+    width: 30vw; 
+    padding: 20px; 
+    background-color: #FD7014;
+    outline: none;
+    border: none; 
+    border-radius: 10px;
+    color: #000000; 
+    text-align: center; 
+    font-size: 17px; 
+    transition: 0.2s;  
+}
+#contact{
+    background-image: url('http://www.hellomissniki.com/wp-content/uploads/2019/06/fitness-excercise.jpg')
+}
+.white{
+    color:#FD7014;
+    display: block; 
+    text-align:center; 
+    font-family: "Trebucet", sans-serif; 
+
+}
+.black{
+    color: #000000; 
+}
+input:focus{
+    transition:0.5; 
+    width: 40vw; 
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 30px 2px 
+}
+#workouttype{
+    width: 30vw; 
+    padding: 20px; 
+    background-color: #FD7014;
+    outline: none;
+    border: none; 
+    border-radius: 10px;
+    color: #000000; 
+    text-align: center; 
+    font-size: 17px; 
+    text-transform: capitalize; 
+    transition: 0.2s;     
+}
+#submitbtn{
+    font-family: "Trebecet", sans-serif; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    letter-spacing: 2.5px; 
+    font-weight: 500; 
+    border-radius: 10px; 
+    width: 20vw; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.info{
+    display: block; 
+    text-align: center; 
+}
+#btn{
+    font-family: "Trebecet", sans-serif; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    letter-spacing: 2.5px; 
+    font-weight: 500; 
+    border-radius: 10px; 
+    width: 20vw;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+#toTranslate{
+    background:#FD7014; 
+    width: 30vw; 
+    height: 10vw; 
+    border-radius: 10px; 
+    font-size: 20px; 
+    font-family: "Trebucet", sans-serif;
+}
+#Translated{
+    background:#FD7014; 
+    width: 30vw; 
+    height: 10vw; 
+    border-radius: 10px; 
+    font-size: 20px; 
+    font-family: "Trebucet", sans-serif;
+}
+#cont{
+    font-family: "Trebecet", sans-serif; 
+    font-size: 14px; 
+    text-transform: uppercase;
+    color: #EEEEEE; 
+    text-align: center; 
+    
+}
+select{
+    width: 30vw; 
+    padding: 20px; 
+    background-color: #FD7014;
+    outline: none;
+    border: none; 
+    border-radius: 10px;
+    color: #000000; 
+    text-align: center; 
+    font-size: 17px; 
+    text-transform: capitalize; 
+    transition: 0.2s; 
+}
+#cal-mes{
+    display: block; 
+    text-align: center;
+
+}
+#maint{
+    font-family: "Trebucet", sans-serif; 
+    font-size: 16px; 
+    color:#FD7014; 
+
+}
+#cal{
+    text-decoration: none;
+    color:#FD7014; 
+
+}
+.container_trans{
+    display: block;
+    text-align: center; 
+    padding: 10px, 10px, 10px, 10px; 
+
+}
+.trans-con{
+    display: block; 
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+
+}
+#instrc{
+    font-size: 13px; 
+    color: #cccccc;
+    text-align: center; 
+}
+#language{
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+#languageadd{
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+</style>
