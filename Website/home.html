@@ -1,0 +1,197 @@
+<!DOCTYPE html>  
+<html> 
+<head id="main"> 
+<meta charset="UTF-8"> 
+<meta name="description" content="Translate Indegenious Languages to English and Vice Versa "> 
+<title>Gooselator </title> 
+</head>
+<body>
+<!--This is the html code for the navigation bar at the top of the website-->
+    <header id="nav-bar">
+        <div class="container"> 
+            <!--This is for the medicine wheel at the top left corner on the nav bar-->
+            <a href = "home.html"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Medicine_Wheel.png" alt="logo" class="logo"></a></a>
+            <nav>
+                <ul> 
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="translate.html">Translator</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header> 
+
+</br> 
+
+<div class='white'>
+    <h1>What Does it Do?</h1> 
+    <!--Just use this paragraph to describe all the features-->
+
+    <h2 id='des1'>Using the Python programming language to <a href='translate.html' id='t-link'>translate</a></a> between indeginous languages and english.</h2>
+    <h2 id='des1'>Start off by clicking the <a href='translate.html' id='t-link'>Translator</a></a> button at the top right corner and type in any word to get it translated to the language of your choosing!</h2>
+    <!--This cycling effect was taken from a previous project made by me-->
+    <div class='container4'>
+        <div class='word'>Body</div>
+        <div class='word'>Mind</div>  
+        <div class='word'>Spirit</div>
+        <div class='word'>Emotions</div> 
+    </div>
+</br>
+    <p id='des1'>Created by Yanny Patel, Krish Patel, Tom Croux and Tim Rozer</p>
+    
+</div>
+
+</body> 
+
+<!--The code below shows the CSS portion of the document that takes care of the specific design aspects-->
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap'); 
+html{
+    background:#000000;    
+}
+#main{ 
+    color: #393E46; 
+    font-family: "Poppins", sans-serrif; 
+    text-align: center; 
+}
+h1{
+    text-decoration: none;
+    font-family: "Trebucet", sans-serif; 
+    color: #FD7014; 
+    display: block; 
+    text-align: center;  
+} 
+#head2{
+    text-decoration: none;
+    font-family: "Trebucet", sans-serif; 
+    color: #FD7014; 
+    display: block; 
+    text-align: center;    
+}
+.container{
+  width: 80%; 
+  margin: 0 auto; 
+     
+}
+.logo{   
+    float: left; 
+    width: 60px; 
+    margin: auto; 
+
+}
+nav{ 
+    float: right; 
+
+}
+header{
+    background-color: #393E46; 
+}
+header::after {
+    content: ''; 
+    display: table; 
+    clear: both; 
+
+}
+nav ul {
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+}
+nav li{
+    display: inline-block;
+    margin-left: 10px; 
+    padding: 20px;       
+}
+nav a{
+    color: #EEEEEE;
+    text-decoration: none;
+    text-transform: uppercase; 
+    font-family: "Trebucet", sans-serif;
+    font-size: 14px; 
+    font-weight: 400;
+    padding: 20px;   
+}
+nav a:hover{
+    background-color: #000000; 
+    color: #FD7014; 
+}
+#des1{
+    text-align: center; 
+    display: block; 
+    font-family: "Trebucet", sans-serif;
+    font-size: 12px; 
+    padding: 10, 20, 10, 20; 
+
+}
+.container4{
+    position: relative; 
+    height: 40vh; 
+    width: 100%; 
+    background:rgb(0,0,0);
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column;
+    align-items:center; 
+}
+.word{
+    max-width: 100%; 
+    letter-spacing: 5px;
+    font-size: 8rem; 
+    position: absolute; 
+    color: #FD7014; 
+    animation: word 15s infinite ease-in-out; 
+    font-family: "Trebucet", sans-serif;
+}
+.word:nth-child(1){
+    animation-delay: -15s; 
+}
+.word:nth-child(2){
+    animation-delay: -11s; 
+}
+.word:nth-child(3){
+    animation-delay: -7s; 
+}
+.word:nth-child(4){
+    animation-delay: -3s; 
+}
+@keyframes word {
+    0%, 5%, 100% {
+        filter: blur(0px); 
+        opacity: 1; 
+    }
+    20%, 80% {
+        filter: blur(35px); 
+        opacity: 0; 
+    }
+}
+.white{
+    color: #EEEEEE; 
+    font-family: "Trebucet", sans-serif; 
+    font-size: 25px; 
+
+}
+.inst{
+    color: #FD7014; 
+    font-family: "Trebucet", sans-serif; 
+    font-size: 15px; 
+    display: block; 
+    text-align: center; 
+    
+   
+
+}
+.inst a{
+    text-decoration: none; 
+    color:#FD7014; 
+}
+#t-link{
+    text-decoration: none;
+    color:#FD7014; 
+}
+</style>
+<!--The line above marks the end of the CSS portion-->
+
+
+</html> 
+
+
