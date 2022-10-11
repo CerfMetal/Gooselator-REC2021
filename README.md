@@ -1,3 +1,3 @@
 # REC2021
 Ryerson Engineering Competition (Programming) 2021
-<img width="1104" alt="REC2021" src="https://user-images.githubusercontent.com/47288189/194950654-cb92541a-4de5-4017-8b68-587c424505a2.png">
+<img width="1552" alt="Gooselator" src="https://user-images.githubusercontent.com/47288189/194980091-56300c94-6d0c-41b4-98bf-71eec61f7bbc.png">
